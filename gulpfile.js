@@ -16,5 +16,5 @@ function buildStyles() {
 
 exports.buildStyles = buildStyles;
 exports.watch = function () {
-    gulp.watch('./asset/sass/*.scss', buildStyles());
+    gulp.watch('./asset/sass/*.scss', buildStyles);
 };
