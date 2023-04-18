@@ -23,15 +23,16 @@
   "devDependencies": {
     "autoprefixer": "^9.2.1",
     "gulp": "^4.0.2",
-    "gulp-postcss": "^8.0.0",
-    "gulp-sass": "^5.0.0",
-    "susy": "^2.2.12"
+    "gulp-postcss": "^9.0.1",
+    "gulp-sass": "^5.1.0"
   },
   "browserslist": [
     "> 5%",
     "> 1% in US"
   ],
   "dependencies": {
-    "minimist": "^1.2.5"
+    "bootstrap": "^5.2.3",
+    "minimist": "^1.2.5",
+    "sass": "^1.62.0"
   }
 }
