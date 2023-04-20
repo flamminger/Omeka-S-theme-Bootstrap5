@@ -1,6 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;500&family=Montserrat:wght@700&display=swap");
+
+
 $primary: #9c242d;
 
+$navbar-light-color:                rgba($primary, .55);
+$navbar-light-hover-color:          rgba($primary, .7);
+$navbar-light-active-color:         rgba($primary, .9);
+$navbar-light-disabled-color:       rgba($primary, .3);
+$navbar-light-toggler-icon-bg:      url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='#{$navbar-light-color}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>") !default;
+$navbar-light-toggler-border-color: rgba($primary, .1);
+$navbar-light-brand-color:          $navbar-light-active-color;
+$navbar-light-brand-hover-color:    $navbar-light-active-color;
+
+
+
 @import "../../node_modules/bootstrap/scss/bootstrap";
+
+* {
+  box-sizing: border-box;
+  font-family: Inter, sans-serif;
+  color: rgba(26, 26, 26, .7);
+}
+
+/*CSS global, header, footer */
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  text-align: justify;
+  line-height: 1.75;
+}
+
+.site-title {
+  text-align: center;
+  margin: 0;
+  padding-left: .25rem;
+  font-size: 1.5em;
+  font-family: Montserrat, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1em;
+  color: black;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+
+nav > li {
+
+  color: black;
+  text-decoration: none;
+  font-size: 1.5em;
+  font-weight: bold;
+}
 
 a {
   text-decoration: none;
@@ -11,4 +66,17 @@ a {
   bottom: 20px;
   right: 20px;
   display: none;
+}
+
+.h2 {
+  color: #333;
+  text-align: left;
+  font-size: 3em;
+  font-weight: 900;
+  padding-top: .5em;
+}
+
+{
+  text-align: justify;
+  line-height: 1.75;
 }
