@@ -69,8 +69,8 @@
   --bs-border-radius-xl: 1rem;
   --bs-border-radius-2xl: 2rem;
   --bs-border-radius-pill: 50rem;
-  --bs-link-color: #9c242d;
-  --bs-link-hover-color: #7d1d24;
+  --bs-link-color: black;
+  --bs-link-hover-color: black;
   --bs-code-color: #d63384;
   --bs-highlight-bg: #fff3cd;
 }
@@ -10752,6 +10752,10 @@ body {
   padding: 0;
 }
 
+* > .file {
+  border: none;
+}
+
 p {
   text-align: justify;
   line-height: 1.75;
@@ -10778,6 +10782,10 @@ nav > li {
   font-weight: bold;
 }
 
+nav > li > a {
+  text-decoration: none;
+}
+
 a {
   text-decoration: none;
 }
@@ -10795,4 +10803,48 @@ a {
   font-size: 3em;
   font-weight: 900;
   padding-top: 0.5em;
+}
+
+.landing-page-title-image > div > img {
+  border-radius: 5%;
+}
+
+.landing-page-title > h1, .landing-page-title > .h1 {
+  text-align: center;
+  margin: 0;
+  padding-left: 0.25rem;
+  font-size: 2em;
+  font-family: Montserrat, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1em;
+  color: black;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.landing-page-title > p {
+  text-align: center;
+  margin: 10px auto;
+  padding-left: 0.25rem;
+  font-size: 1.5em;
+  font-family: Montserrat, sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  line-height: 1.5em;
+  color: black;
+  text-transform: none;
+  letter-spacing: 0.05em;
+}
+
+.column-img-right {
+  display: inline-block;
+  width: 50%;
+  box-sizing: border-box;
+  padding: 10px;
+  vertical-align: top;
+}
+
+.file > a > img {
+  border-radius: 5%;
 }

@@ -2,16 +2,16 @@
 
 
 $primary: #9c242d;
+$link-color: black;
 
-$navbar-light-color:                rgba($primary, .55);
-$navbar-light-hover-color:          rgba($primary, .7);
-$navbar-light-active-color:         rgba($primary, .9);
-$navbar-light-disabled-color:       rgba($primary, .3);
-$navbar-light-toggler-icon-bg:      url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='#{$navbar-light-color}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>") !default;
+$navbar-light-color: rgba($primary, .55);
+$navbar-light-hover-color: rgba($primary, .7);
+$navbar-light-active-color: rgba($primary, .9);
+$navbar-light-disabled-color: rgba($primary, .3);
+$navbar-light-toggler-icon-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='#{$navbar-light-color}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>") !default;
 $navbar-light-toggler-border-color: rgba($primary, .1);
-$navbar-light-brand-color:          $navbar-light-active-color;
-$navbar-light-brand-hover-color:    $navbar-light-active-color;
-
+$navbar-light-brand-color: $navbar-light-active-color;
+$navbar-light-brand-hover-color: $navbar-light-active-color;
 
 
 @import "../../node_modules/bootstrap/scss/bootstrap";
@@ -27,6 +27,10 @@ html,
 body {
   margin: 0;
   padding: 0;
+}
+
+* > .file {
+  border: none;
 }
 
 p {
@@ -57,6 +61,10 @@ nav > li {
   font-weight: bold;
 }
 
+nav > li > a {
+  text-decoration: none;
+}
+
 a {
   text-decoration: none;
 }
@@ -76,7 +84,46 @@ a {
   padding-top: .5em;
 }
 
-{
-  text-align: justify;
-  line-height: 1.75;
+.landing-page-title-image > div > img {
+  border-radius: 5%;
+}
+
+.landing-page-title > h1 {
+  text-align: center;
+  margin: 0;
+  padding-left: .25rem;
+  font-size: 2em;
+  font-family: Montserrat, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1em;
+  color: black;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.landing-page-title > p {
+  text-align: center;
+  margin: 10px auto;
+  padding-left: .25rem;
+  font-size: 1.5em;
+  font-family: Montserrat, sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  line-height: 1.5em;
+  color: black;
+  text-transform: none;
+  letter-spacing: 0.05em;
+}
+
+.column-img-right {
+  display: inline-block;
+  width: 50%;
+  box-sizing: border-box;
+  padding: 10px;
+  vertical-align: top;
+}
+
+.file > a > img {
+  border-radius: 5%;;
 }
