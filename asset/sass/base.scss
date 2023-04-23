@@ -1,25 +1,26 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;500&family=Montserrat:wght@700&display=swap");
+@font-face {
+  font-family: "Open Sans";
+  src: url(../font/OpenSans-VariableFont_wdth,wght.ttf) format("truetype");
+  font-weight: auto;
+  font-style: auto;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url(../font/Montserrat-VariableFont_wght.ttf) format("truetype");
+  font-weight: auto;
+  font-style: auto;
+}
 
 
 $primary: #9c242d;
-$link-color: black;
-
-$navbar-light-color: rgba($primary, .55);
-$navbar-light-hover-color: rgba($primary, .7);
-$navbar-light-active-color: rgba($primary, .9);
-$navbar-light-disabled-color: rgba($primary, .3);
-$navbar-light-toggler-icon-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='#{$navbar-light-color}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>") !default;
-$navbar-light-toggler-border-color: rgba($primary, .1);
-$navbar-light-brand-color: $navbar-light-active-color;
-$navbar-light-brand-hover-color: $navbar-light-active-color;
-
+$link-color: #1a1a1a;
 
 @import "../../node_modules/bootstrap/scss/bootstrap";
 
 * {
   box-sizing: border-box;
-  font-family: Inter, sans-serif;
-  color: rgba(26, 26, 26, .7);
+  font-family: "Open Sans", sans-serif;
 }
 
 /*CSS global, header, footer */
@@ -34,8 +35,17 @@ body {
 }
 
 p {
+  font-size: 1.15em;
   text-align: justify;
-  line-height: 1.75;
+  line-height: 1.6;
+}
+
+footer {
+  color: #1a1a1a;
+}
+
+footer p {
+  font-size: 1em;
 }
 
 .site-title {
@@ -44,7 +54,7 @@ p {
   padding-left: .25rem;
   font-size: 1.5em;
   font-family: Montserrat, sans-serif;
-  font-weight: 400;
+  font-weight: 800;
   font-style: normal;
   line-height: 1em;
   color: black;
@@ -52,18 +62,6 @@ p {
   letter-spacing: 0.05em;
 }
 
-
-nav > li {
-
-  color: black;
-  text-decoration: none;
-  font-size: 1.5em;
-  font-weight: bold;
-}
-
-nav > li > a {
-  text-decoration: none;
-}
 
 a {
   text-decoration: none;
@@ -94,7 +92,7 @@ a {
   padding-left: .25rem;
   font-size: 2em;
   font-family: Montserrat, sans-serif;
-  font-weight: 400;
+  font-weight: 600;
   font-style: normal;
   line-height: 1em;
   color: black;
@@ -120,4 +118,9 @@ a {
   height: 250px;
   object-fit: cover;
 }
+
+.nav-site-select {
+  font-weight: 500;
+}
+
 

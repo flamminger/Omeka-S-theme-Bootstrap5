@@ -8,7 +8,10 @@ $lang = $this->lang();
 ?>
 
 <?php $this->trigger('view.show.before'); ?>
-
+<div class="container">
+<!--display viewer / export-->
+<?php $this->trigger('view.show.after'); ?>
+</div>
 <div class="container mt-4 mb-5" style="word-wrap : break-word;">
 <div class="my-5">
 <?php echo $this->pageTitle($item->displayTitle(null, ($filterLocale ? $lang : null)), 2); ?>
@@ -39,5 +42,4 @@ $lang = $this->lang();
 <!--            </div>-->
 <!--        </div>-->
 
-<?php $this->trigger('view.show.after'); ?>
 </div>

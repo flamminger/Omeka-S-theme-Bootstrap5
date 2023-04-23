@@ -19,7 +19,7 @@ $layoutAttributes = [
         <?php if (!$hasChildren || ($showChildren == 0)): ?>
             <li class="nav-item text-decoration-none text-reset <?php if ($page->isActive()) echo 'active' ?>">
                 <a 
-                    class="nav-link" 
+                    class="nav-link text-dark nav-site-select"
                     href="<?php echo $page->getHref() ?>"
                     <?php if ($page->getTarget() != ""): ?>
                         target="<?php echo $page->getTarget(); ?>"

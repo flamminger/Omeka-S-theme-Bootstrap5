@@ -39,11 +39,11 @@ try {
 <?php echo $this->htmlElement('html'); ?>
 
 <head>
-  <?php echo $this->headMeta(); ?>
-  <?php echo $this->headTitle(); ?>
-  <?php echo $this->headLink(); ?>
-  <?php echo $this->headStyle(); ?>
-  <?php echo $this->headScript(); ?>
+    <?php echo $this->headMeta(); ?>
+    <?php echo $this->headTitle(); ?>
+    <?php echo $this->headLink(); ?>
+    <?php echo $this->headStyle(); ?>
+    <?php echo $this->headScript(); ?>
 
 </head>
 
@@ -54,126 +54,165 @@ try {
 <?php echo $this->partial('common/header-vertical'); ?>
 
 <?php if ($isHomePage && $top_image): ?>
-<style>
-  .boxbackground {
-    position: relative;
-    width: 100%;
-    background: url("<?php echo $top_image; ?>") no-repeat center center;
-    background-size: cover;
-  }
-</style>
+    <style>
+        .boxbackground {
+            position: relative;
+            width: 100%;
+            background: url("<?php echo $top_image; ?>") no-repeat center center;
+            background-size: cover;
+        }
+    </style>
 
-<div class="boxbackground">
-  <div style="background: rgba(0, 0, 0, 0.5);">
-    <div class="container">
+    <div class="boxbackground">
+        <div style="background: rgba(0, 0, 0, 0.5);">
+            <div class="container">
 
-      <div class="row py-5 text-white text-center">
-        <div class="col-xl-9 mx-auto my-5">
+                <div class="row py-5 text-white text-center">
+                    <div class="col-xl-9 mx-auto my-5">
 
-          <?php if ($site_sub_title = $this->themeSetting('site_sub_title')): ?>
-          <h4 class="mb-3">
-            <?php echo $site_sub_title; ?>
-          </h4>
-          <?php endif; ?>
+                        <?php if ($site_sub_title = $this->themeSetting('site_sub_title')): ?>
+                            <h4 class="mb-3">
+                                <?php echo $site_sub_title; ?>
+                            </h4>
+                        <?php endif; ?>
 
-          <h1>
-            <?php echo $siteTitle; ?>
-          </h1>
-          <?php if ($site_summary = $site->summary()): ?>
-          <p class="mt-3">
-            <?php echo $site_summary; ?>
-          </p>
-          <?php endif; ?>
+                        <h1>
+                            <?php echo $siteTitle; ?>
+                        </h1>
+                        <?php if ($site_summary = $site->summary()): ?>
+                            <p class="mt-3">
+                                <?php echo $site_summary; ?>
+                            </p>
+                        <?php endif; ?>
 
-          <?php if ($top_url = $this->themeSetting('top_url')): ?>
-          <a href="<?php echo $top_url; ?>"
-            class="mt-3 btn btn-danger px-3" style="border-radius: 40px;">
-            <i class="fa-solid fa-magnifying-glass"></i> <?php echo $this->translate('Browse'); ?>
-          </a>
-          <?php endif; ?>
+                        <?php if ($top_url = $this->themeSetting('top_url')): ?>
+                            <a href="<?php echo $top_url; ?>"
+                               class="mt-3 btn btn-danger px-3" style="border-radius: 40px;">
+                                <i class="fa-solid fa-magnifying-glass"></i> <?php echo $this->translate('Browse'); ?>
+                            </a>
+                        <?php endif; ?>
+                    </div>
+                </div>
+
+            </div>
         </div>
-      </div>
-
     </div>
-  </div>
-</div>
 <?php endif; ?>
 
 
 <div id="content" role="main">
-  <?php echo $this->content; ?>
+    <?php echo $this->content; ?>
 </div>
 
 
 <!-- Footer -->
 <footer class="navbar-light bg-light text-center">
-  <div class="container text-white">
-    <div class="row">
-      <div class="col-md-3">
-        <p><strong>Museum im alten Zeughaus</strong></p>
-        <address>
-          <p>Emmenstraße 9</p>
-          <p>8940 Bad Radkersburg</p>
-        </address>
-        <p>Tel:
-          <a href="tel:+433476350010300">+43 (0)3476 3500 103 00</a>
+    <div class="container text-dark">
+        <div class="row d-flex align-items-stretch">
+            <div class="col-md-3 h-25">
+                <div class="col">
+                    <p><strong>Museum im alten Zeughaus</strong></p>
+                </div>
+                <div class="col">
+                    <address>
+                        <p>Emmenstraße 9 <br>
+                            8940 Bad Radkersburg</p>
+                    </address>
+                </div>
+                <div class="col">
+                    <p>Tel:
+                        <a href="tel:+433476350010300">+43 (0)3476 3500 103 00</a>
+                        <br>
+                        Mobil:
+                        <a href="tel:+4366480849103">+43 (0)664 80 849 103</a>
+                        <br>
+                        E-Mail:
+                        <a href="mailto:museum@badradkersburg.at">museum@badradkersburg.at</a>
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="col">
+                    <p><strong>Öffnungszeiten</strong></p>
+                </div>
+                <div class="col">
+                    <p>Mai bis Oktober: <br>Dienstag, Mittwoch, Freitag, Samstag</p>
+                </div>
+                <div class="col">
+                    <p>von 14:00 bis 18:00 Uhr</p>
+                </div>
+                <div class="col">
+                    <p>Dezember und Jänner geschlossen</p>
+                </div>
+            </div>
+
+            <div class="col-md-3"
+            >
+                <div class="col">
+                    <p><strong>Führungen</strong></p>
+                </div>
+                <div class="col">
+                    <p>Mittwoch und Freitag 15 Uhr</p>
+                </div>
+                <div class="col">
+                    <p>Museumsführungen sind zusätzlich auch nach Voranmeldung möglich</p>
+                </div>
+                <div class="col">
+                    <p>Dezember und Jänner geschlossen</p>
+                </div>
+
+            </div>
+            <div class="col-md-3"
+            >
+                icons
+
+            </div>
+        </div>
+        <p class="my-0 text-white">
+            <!-- text-muted -->
+            <small>
+                <?php if ($footerContent = $this->themeSetting('footer')): ?>
+                    <?php echo $footerContent; ?>
+                <?php else: ?>
+                    <?php echo $this->translate('Powered by Omeka S'); ?>
+                <?php endif; ?>
+            </small>
         </p>
-        <p>Mobil:
-          <a href="tel:+4366480849103">+43 (0)664 80 849 103</a>
-        </p>
-        <p>E-Mail:
-          <a href="mailto:museum@badradkersburg.at">museum@badradkersburg.at</a>
-        </p>
-      </div>
-      <div class="col-md-3"></div>
-      <div class="col-md-3"></div>
-      <div class="col-md-3"></div>
     </div>
-    <p class="my-0 text-white">
-      <!-- text-muted -->
-      <small>
-        <?php if ($footerContent = $this->themeSetting('footer')): ?>
-        <?php echo $footerContent; ?>
-        <?php else: ?>
-        <?php echo $this->translate('Powered by Omeka S'); ?>
-        <?php endif; ?>
-      </small>
-    </p>
-  </div>
 </footer>
 
 <button type="button" class="btn btn-danger btn-lg" style="border-radius: 10px;" id="btn-back-to-top">
-  <i class="fa-solid fa-arrow-up"></i>
+    <i class="fa-solid fa-arrow-up"></i>
 </button>
 
 
-
 <script>
-  //Get the button
-  let mybutton = document.getElementById("btn-back-to-top");
+    //Get the button
+    let mybutton = document.getElementById("btn-back-to-top");
 
-  // When the user scrolls down 20px from the top of the document, show the button
-  window.onscroll = function() {
-    scrollFunction();
-  };
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function () {
+        scrollFunction();
+    };
 
-  function scrollFunction() {
-    if (
-      document.body.scrollTop > 20 ||
-      document.documentElement.scrollTop > 20
-    ) {
-      mybutton.style.display = "block";
-    } else {
-      mybutton.style.display = "none";
+    function scrollFunction() {
+        if (
+            document.body.scrollTop > 20 ||
+            document.documentElement.scrollTop > 20
+        ) {
+            mybutton.style.display = "block";
+        } else {
+            mybutton.style.display = "none";
+        }
     }
-  }
-  // When the user clicks on the button, scroll to the top of the document
-  mybutton.addEventListener("click", backToTop);
 
-  function backToTop() {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
-  }
+    // When the user clicks on the button, scroll to the top of the document
+    mybutton.addEventListener("click", backToTop);
+
+    function backToTop() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
 </script>
 </body>
 
