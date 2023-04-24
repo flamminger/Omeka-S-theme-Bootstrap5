@@ -79,7 +79,7 @@ $bodyTerm = $this->siteSetting('browse_body_property_term');
     }
 </style>
 
-<div class="container-fluid mt-4 mb-5">
+<div class="container-fluid mt-4 mb-5 ps-5 pe-5">
 
     <?php if ($itemSetShow): ?>
     <div class="mb-5 container">
@@ -116,7 +116,7 @@ $bodyTerm = $this->siteSetting('browse_body_property_term');
             <div class="col-md-auto text-end mb-2">
                 <?php echo $this->sortSelector($sortHeadings); ?>
             </div>
-            <!-- 表示スタイル -->
+            <!-- displaystyle -->
             <div class="col-auto text-end mb-2">
                 <label class="col-form-label">
 
@@ -124,7 +124,7 @@ $bodyTerm = $this->siteSetting('browse_body_property_term');
                     <a id="iconList" class="mx-1 deactive" href="#"><i class="fa-solid fa-list"></i></a>
                 </label>
             </div>
-            <!-- 詳細検索 -->
+            <!-- Advanced Search -->
             <div class="col-auto text-end mb-2">
                 <?php echo $this->hyperlink($translate('Advanced search'), $this->url('site/resource', ['controller' => 'item', 'action' => 'search'], ['query' => $query], true), ['class' => 'advanced-search btn btn-secondary', 'style' => 'border-radius: 40px;']); ?>
             </div>
