@@ -14,7 +14,7 @@ if ($itemSetShow):
     $query['item_set_id'] = $itemSet->id();
 endif;
 
-//ソート
+//ソートÏ
 $sortHeadings = [
     [
         'label' => $translate('Created'),
@@ -132,7 +132,12 @@ $bodyTerm = $this->siteSetting('browse_body_property_term');
 
 
         <?php $this->trigger('view.browse.before'); ?>
-
+<?php
+$linkAttributes = array(
+    'class' => 'd-flex mx-auto my-auto img-fluid',
+    'style' => 'max-height: 100%;'
+);
+?>
 
         <!-- divGrid -->
         <div class="row my-4 closed" id="divGrid">
@@ -143,19 +148,20 @@ $bodyTerm = $this->siteSetting('browse_body_property_term');
         ?>
             <div class="col-6 col-md-3">
                 <!-- Card -->
-                <div class="mb-3">
+                <div class="mb-3 text-center">
                     <!-- card -->
 
                     <!-- Card image -->
-                    <div style="background-color : lightgrey; height : 150px;" class="text-center">
+                    <div class="text-center bg-light ratio ratio-4x3 d-flex align-items-center">
                         <?php
-                            if ($this->thumbnail($item, 'medium')):
+                            if ($this->thumbnail($item, 'large')):
                         ?>
-                        <?php echo $item->linkRaw($this->thumbnail($item, 'medium', ['style' => 'height : 150px; max-width : 100%;'])); ?>
+
+                        <?php echo $item->linkRaw($this ->thumbnail($item, 'large', $linkAttributes, ['style' => ['max-height: 100%;']]), null, ['class' => 'd-flex justify-content-center align-items-center']); ?>
                         <?php
                             else:
                         ?>
-                        <?php echo $item->linkRaw("<img style='height : 150px; max-width : 100%;'/>"); ?>
+                        <?php echo $item->linkRaw("<img src='".$this->assertURL('img/noimg.png')."' class='img-fluid'/>"); ?>
                         <!--  src='".$this->assetUrl('img/noimg.png')."' -->
                         <?php
                             endif;
@@ -164,7 +170,7 @@ $bodyTerm = $this->siteSetting('browse_body_property_term');
                     <!-- Card content -->
                     <div class="card-body">
                         <!-- Title -->
-                        <h5><?php echo $item->link($heading); ?>
+                        <h5 class="fs-6"><?php echo $item->link($heading); ?>
                         </h5>
                     </div>
                 </div>
