@@ -124,10 +124,10 @@ $skipFormAction = !empty($skipFormAction);
             <div class="text-center">
                 <button id="openBtn"
                     style="border-radius: 40px; <?= $page > 1 ? '' : 'display:none;' ?>>"
-                    class="btn btn-sm btn-dark"><?= $translate('メタデータを表示'); ?></button>
+                    class="btn btn-sm btn-dark"><?= $translate('Show Metadta'); ?></button>
                 <button id="closeBtn"
                     style="border-radius: 40px; <?= $page > 1 ? 'display:none;' : '' ?>"
-                    class="btn btn-sm btn-dark"><?= $translate('隠す'); ?></button>
+                    class="btn btn-sm btn-dark"><?= $translate('Hide'); ?></button>
             </div>
         </div>
 
@@ -152,7 +152,7 @@ $skipFormAction = !empty($skipFormAction);
         </div>
 
         <div class="mb-4">
-            <div class="container closed" id="searchForm">
+            <div class="container" id="searchForm">
                 <div id="search"></div>
                 <?php
                     $test = $this->searchForm($searchPage, null, $skipFormAction);
@@ -313,6 +313,7 @@ $documentCount = $response->getTotalResults();
         }
     }
 
+
     function createElementFromHTML(htmlString) {
         var div = document.createElement('div');
         div.innerHTML = htmlString.trim();
@@ -397,7 +398,7 @@ $documentCount = $response->getTotalResults();
         let input = $(div).find("input")
         input.addClass("form-control my-4")
         input.removeClass("autosuggest")
-        input.attr("placeholder", "検索キーワードを入力")
+        input.attr("placeholder", "Enter your search term")
         input.css("border-radius", "40px")
     }
 
@@ -418,7 +419,7 @@ $documentCount = $response->getTotalResults();
             $(this.form).find("select, input").val("").end().find(":checked").prop("checked", false);
         });
         reset.css("border-radius", "40px")
-        reset.append("検索条件のリセット")
+        reset.append("Reset")
 
 
         let close = $("<button>")
@@ -429,7 +430,7 @@ $documentCount = $response->getTotalResults();
             toggle()
         });
         close.css("border-radius", "40px")
-        close.append("検索条件を閉じる")
+        close.append("Close")
     }
 
 

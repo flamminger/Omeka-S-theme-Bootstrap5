@@ -126,7 +126,8 @@ $bodyTerm = $this->siteSetting('browse_body_property_term');
             </div>
             <!-- 詳細検索 -->
             <div class="col-auto text-end mb-2">
-                <?php echo $this->hyperlink($translate('Advanced search'), $this->url('site/resource', ['controller' => 'item', 'action' => 'search'], ['query' => $query], true), ['class' => 'advanced-search btn btn-secondary', 'style' => 'border-radius: 40px;']); ?>
+                <a class="advanced-search btn btn-secondary" style="border-radius: 40px;" href="./search">Advanced search</a>
+
             </div>
         </div>
 
