@@ -53,20 +53,17 @@ $defaultThumbnail = '<img src="' . $assetUrl('thumbnails/default.png', 'Omeka', 
     <div class="list-col col-6 col-md-3">
         <div class="list-row row mb-3">
 
-
             <div class="list-col1 col-12 mb-2">
-                <div style="background-color : lightgrey; height : 150px;" class="text-center">
+                <div class="text-center bg-light ratio ratio-4x3 d-flex align-items-center">
                     <?php $media = $resource->primaryMedia(); ?>
                     <?php if ($media): ?>
-                    <?= $hyperlink->raw(
-        $this->thumbnail($media, 'square', ['title' => $media->displayTitle(), 'alt' => $media->mediaType() . ' thumbnail', 'style' => 'height : 150px; max-width : 100%;']),
-        $resource->url()
-    ) ?>
-                    <?php
-                                else:
-                            ?>
-                    <?php echo $hyperlink->raw("<img style='height : 150px; max-width : 100%;'/>", $resource->url()); ?>
-                    <!--  src='".$this->assetUrl('img/noimg.png')."' -->
+                        <?php echo $hyperlink->raw(
+                            $this->thumbnail($media, 'large', ['title' => $media->displayTitle(), 'alt' => $media->mediaType(), 'class' => "img-fluid", 'style' => 'max-height: 100%;']),
+                            $resource->url(),
+                            ['class' => 'd-flex justify-content-center align-items-center']
+                        ); ?>
+                    <?php else: ?>
+                        <?php echo $hyperlink->raw("<img class='img-fluid'/>", $this->assetUrl('img/noimg.png')); ?>
                     <?php endif; ?>
                 </div>
             </div>
